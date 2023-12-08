@@ -4,27 +4,21 @@ apply plugin: 'org.jetbrains.dokka-android'
 
 dependencies {
     api project(':hwsecurity:core')
-
     implementation 'org.bouncycastle:bcprov-jdk15on:1.65'
-
-    compileOnly 'androidx.annotation:annotation:1.1.0'
-
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:2.18.0'
 }
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 24
         versionName rootProject.ext.hwSdkVersionName
         consumerProguardFiles 'hwsecurity-ssh.pro'
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     // Do not abort build if lint finds errors
