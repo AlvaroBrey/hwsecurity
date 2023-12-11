@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.jetbrains.dokka-android'
 
 dependencies {
-    api project(':hwsecurity:core')
+    implementation project(':hwsecurity:core')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.10.0'
 }

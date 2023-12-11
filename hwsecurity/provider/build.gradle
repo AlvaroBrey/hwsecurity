@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.jetbrains.dokka-android'
 
 dependencies {
-    api project(':hwsecurity:core')
+    implementation project(':hwsecurity:core')
 }
 
 android {

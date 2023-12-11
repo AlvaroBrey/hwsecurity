@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 dependencies {
-    api project(':hwsecurity:core')
+    implementation project(':hwsecurity:core')
 }
 
 android {
