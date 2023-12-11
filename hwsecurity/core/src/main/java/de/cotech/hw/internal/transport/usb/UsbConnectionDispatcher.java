@@ -25,6 +25,7 @@
 package de.cotech.hw.internal.transport.usb;
 
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -33,11 +34,13 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
+import android.os.Build;
 
 import androidx.annotation.AnyThread;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.RestrictTo.Scope;
 import androidx.annotation.UiThread;
+
 import de.cotech.hw.util.HwTimber;
 
 
@@ -108,9 +111,14 @@ public class UsbConnectionDispatcher {
         return false;
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @UiThread
     public void onResume() {
-        context.registerReceiver(usbBroadcastReceiver, intentFilter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(usbBroadcastReceiver, intentFilter, Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            context.registerReceiver(usbBroadcastReceiver, intentFilter);
+        }
     }
 
     @UiThread
