@@ -25,10 +25,11 @@
 package de.cotech.hw.provider;
 
 
-import java.security.PrivateKey;
-
 import androidx.annotation.RestrictTo;
 import androidx.annotation.RestrictTo.Scope;
+
+import java.security.PrivateKey;
+
 import de.cotech.hw.SecurityKeyAuthenticator;
 
 

@@ -8,11 +8,10 @@ dependencies {
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-
     namespace "de.cotech.hw.fido"
 
     defaultConfig {
+        compileSdk 34
         minSdkVersion 24
         versionName rootProject.ext.hwSdkVersionName
         vectorDrawables.useSupportLibrary = true
