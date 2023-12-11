@@ -7,6 +7,7 @@ dependencies {
     implementation project(':hwsecurity:provider')
     compileOnly project(':hwsecurity:ui')
     implementation 'org.bouncycastle:bcprov-jdk15on:1.65'
+    implementation 'androidx.annotation:annotation-jvm:1.7.0'
 }
 
 android {

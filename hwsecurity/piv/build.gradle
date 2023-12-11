@@ -6,6 +6,8 @@ dependencies {
     api project(':hwsecurity:core')
     api project(':hwsecurity:provider')
     compileOnly project(':hwsecurity:ui')
+    implementation 'androidx.annotation:annotation-jvm:1.7.0'
+
 }
 
 android {

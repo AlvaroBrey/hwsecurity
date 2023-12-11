@@ -25,6 +25,8 @@
 package de.cotech.hw.provider;
 
 
+import androidx.annotation.RestrictTo;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -39,12 +41,9 @@ import java.security.SecureRandom;
 import java.security.SignatureException;
 import java.security.SignatureSpi;
 
-import androidx.annotation.RestrictTo;
-import androidx.annotation.RestrictTo.Scope;
-
 
 @SuppressWarnings("unused") // used by CotechSecurityKeyProvider
-@RestrictTo(Scope.LIBRARY_GROUP)
+@RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
 public abstract class SecurityKeySignature extends SignatureSpi {
     private final MessageDigest md;
     private final ByteArrayOutputStream rawData;
