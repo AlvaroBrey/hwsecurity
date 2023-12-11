@@ -3,8 +3,6 @@ apply plugin: 'maven-publish'
 
 dependencies {
     api project(':hwsecurity:core')
-    implementation 'androidx.annotation:annotation-jvm:1.7.0'
-
 }
 
 android {
