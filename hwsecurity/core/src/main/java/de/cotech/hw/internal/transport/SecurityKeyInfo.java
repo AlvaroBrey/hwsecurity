@@ -79,6 +79,7 @@ public abstract class SecurityKeyInfo implements Parcelable {
             }
         }
 
+
         return new AutoValue_SecurityKeyInfo(
                 transportType, securityKeyType, fingerprintList, aid, userId, url, verifyRetries, verifyAdminRetries, hasLifeCycleSupport);
     }
