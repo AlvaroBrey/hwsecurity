@@ -1,23 +1,25 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        gradlePluginPortal()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
-        classpath 'org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.17'
+        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath 'org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.18'
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        gradlePluginPortal()
+        mavenCentral()
     }
 }
 
 ext {
-    compileSdkVersion = 29
+    compileSdkVersion = 34
     hwSdkVersionName = '4.1.0'
 }
