@@ -8,6 +8,8 @@ dependencies {
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    namespace "de.cotech.hw.intent.usb"
+
     defaultConfig {
         minSdkVersion 24
         versionName rootProject.ext.hwSdkVersionName

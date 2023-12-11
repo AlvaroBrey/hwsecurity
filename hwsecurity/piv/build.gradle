@@ -11,6 +11,8 @@ dependencies {
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    namespace "de.cotech.hw.piv"
+
     defaultConfig {
         minSdkVersion 24
         versionName rootProject.ext.hwSdkVersionName
